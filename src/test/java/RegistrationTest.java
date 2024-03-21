@@ -95,7 +95,7 @@ public class RegistrationTest {
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id=date] input").setValue(planningDate);
         $("[data-test-id=name] input").setValue("Костеркина Анастасия");
-        $("[data-test-id=phone] input").setValue("+79009653384");
+        $("[data-test-id=phone] input").setValue("+7000");
         $("[data-test-id=agreement]").click();
         $$("button").get(1).click();
         $("[data-test-id=phone].input_invalid .input__sub").shouldHave(Condition.text("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
