@@ -18,11 +18,8 @@ public class RegistrationTest {
 
 
 
-    public String generateDate2(int days) {
-        return LocalDate.now().minusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-    }
 
-    String planningDateNegative = generateDate2(4);
+
     String planningDate = generateDate(5);
     @Test
     void shouldTestV1() throws InterruptedException {
@@ -130,6 +127,7 @@ public class RegistrationTest {
     void shouldTestV9() throws InterruptedException {
         open("http://localhost:9999");
         $("[data-test-id='date'] input").sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
+        String planningDateNegative = generateDate(1);
         $("[data-test-id=date] input").setValue(planningDateNegative);
         $("[data-test-id=city] input").setValue("Казань");
         $("[data-test-id=name] input").setValue("Костеркина Анастасия");
