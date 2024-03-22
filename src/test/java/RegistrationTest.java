@@ -15,7 +15,7 @@ public class RegistrationTest {
     public String generateDate(int days) {
         return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
-    
+
 
 
     String planningDate = generateDate(5);
